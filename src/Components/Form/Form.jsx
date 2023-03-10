@@ -24,8 +24,10 @@ const Form = () => {
     const amount = document.getElementById("amount");
     const value = amount.value;
 
-    if (value < 0 || value > 9) {
-      setInput("");
+    if (value < 0) {
+      setInput([]);
+    } else if (value > 9) {
+      setInput(text);
     } else {
       let result = text.slice(0, value);
       setInput(result);
